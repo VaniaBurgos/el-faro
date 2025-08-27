@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Faro | Portal de Noticias</title>
+
+    <link rel="icon" type="image/png" href="./assets/img/el-faro-logo.png">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="./assets/img/el-faro-logo-nom.png" alt="logo del portal de noticias El Faro" width="200" height="200" title="el-faro-logo">
+        <h1>El Faro</h1>
+        <h2>Portal de noticias</h2>
+
+        <!-- Poner Nav dentro del Header ayuda a que la estructura sea semántica, clara para SEO y da mayor accesibilidad-->
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./quienes-somos.html">Quiénes somos</a></li>
+                <li><a href="./deportes.html">Deportes</a></li>
+                <li><a href="./negocios.html">Negocios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="banner-seccion">
+            <h2>Quiénes somos</h2>
+            <img src="./assets/img/quienes-somos.jpg" alt="periodista" width="748" height="419" title="periodista">
+        </div>    
+        
+        <p>Durante la pandemia del 2020, un grupo de periodistas independientes residentes en Concepción se conocieron a través de un foro de internet.</p>
+        <p>Luego de un par de conversaciones remotas, notaron que compartían la pasión por la búsqueda de verdad y la justicia.</p>
+        <p>Motivados por combatir las fakes news (muy presentes en aquella época), formaron <em>"El Faro"</em>, un boletín independiente, cuyo objetivo principal es entregarte contenido sin la sombra de una posición política o empresarial.</p> 
+        <p>Gracias por leernos!</p>       
+
+        <h2>Conoce a nuestro equipo</h2>
+
+        <div class="equipo-container">
+            <figure><!--Etiqueta semántica para agrupar imágenes y su descripción-->
+                <img src="./assets/img/team/camila-moreno.png" alt="ceo-el-faro" width="200" height="200" title="ceo-el-faro-camila-moreno">
+                <figcaption><!--Descripción asociada a la imagen.-->
+                    <strong>CEO</strong>
+                    <p>Camila Moreno</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="./assets/img/team/javier-cancino.png" alt="periodista-deportivo-el-faro" width="200" height="200" title="periodista-deportivo-el-faro-javier-cancino">
+                <figcaption>
+                    <strong>Periodista deportivo</strong>
+                    <p>Javier Cancino</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="./assets/img/team/marcelo-ulloa.png" alt="marketing-el-faro" width="200" height="200" title="marketing-el-faro-marcelo-ulloa">
+                <figcaption>
+                    <strong>Encargado de Marketing</strong>
+                    <p>Marcelo Ulloa</p>
+                </figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <address>
+            O'Higgins 657, Concepción
+            <a href="tel:+56958437920">+56 9 5843 7920 </a>
+            <a href="mailto:burgosmarquezvania@gmail.com" target="_blank">burgosmarquezvania@gmail.com</a>
+        </address>
+        <p>El Faro | Portal de Noticias.<br>&copy; 2025 Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

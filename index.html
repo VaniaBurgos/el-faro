@@ -1,0 +1,146 @@
+<!DOCTYPE html> <!-- Importante para que el navegador entienda que se trata de un archivo HTML5.-->
+<html lang="es"> <!--Indica a los motores de búsqueda en qué idioma está el contenido: 
+                    * Google puede clasificar mejor la página por búsquedas en ese idioma. 
+                    * Los lectores de pantallas saben como pronunciar el contenido.
+                    * Mejor experiencia de usuario: menor tasa de rebote: impacta al SEO -->
+
+<head> <!-- La mayor parte de la información es invisible, pero da indicaciones al navegador.-->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres especiales para evitar errores. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Visibilidad del contenido en distintos tipos de pantallas.-->
+    <title>El Faro | Portal de Noticias</title> <!--Título de la pestaña.-->
+
+    <link rel="icon" type="image/png" href="./assets/img/el-faro-logo.png"> <!--Favicon: ícono visible en la pestaña-->
+    <link rel="stylesheet" href="./assets/css/styles.css"> <!--Archivo de estilos.-->
+</head>
+
+<body>
+
+    <header> <!--Parte superior de la página.-->
+        <img src="./assets/img/el-faro-logo-nom.png" alt="logo del portal de noticias El Faro" width="200" height="200" title="el-faro-logo"> <!--Logo de la organización:
+                                               Atributos: src: ruta de la imagen / alt: texto alternativo, útil para SEO y accesibilidad / width: ancho de la imagen / height: alto de la imagen.-->
+        <h1>El Faro</h1><!--Título de la organización-->
+        <h2>Portal de noticias</h2><!--Subtítulo de la organización-->
+
+        <!-- Poner Nav dentro del Header ayuda a que la estructura sea semántica, clara para SEO y da mayor accesibilidad-->
+        <nav aria-label="Menú principal"><!-- El atributo aria-label le da un nombre accesible al bloque para que el lector de pantalla lo anuncie.-->
+            <ul> <!--UL: lista desordenada (sin números), OL: lista ordenada (con números o letras).-->
+
+                <!--Enlaces a otras páginas del sitio (también podrían ser secciones de la página)-->
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./quienes-somos.html">Quiénes somos</a></li>
+                <li><a href="./deportes.html">Deportes</a></li>
+                <li><a href="./negocios.html">Negocios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main><!--Parte principal del cuerpo, aquí va la mayor parte del contenido.-->
+        <div class="banner-seccion"><!--Contenedor, útil para ordenar el contenido con CSS (a través de atributos).
+                                        Atributo class: cuando el diseño de css se repetirá en varias secciones similares, cuando el diseño se aplica a solo 1 sección, el atributo es id. -->
+            <h2>Noticias más vistas</h2>
+            <img src="./assets/img/noticias.png" alt="noticias" width="748" height="419" title="noticias">
+        </div>    
+        
+        <table class="tabla_noticias"> 
+            <thead><!--Cabecera de la tabla-->
+                <tr><!--Índices de la tabla-->
+                    <th>Noticia</th>
+                    <th>Contenido multimedia</th>
+                </tr>
+            </thead>
+     
+            <tbody><!--Aquí va el contenido de la tabla.-->
+                <tr><!--Fila de la tabla, por cada índice se debe escribir un tr.-->
+                    <td><!--Contenido de la celda-->
+                        <article><!--Etiqueta de artículo, útil para el navegador.-->
+                            <!-- Título de la noticia-->
+                            <h3>Violencia en Avellaneda: Hinchas de Universidad de Chile atacados por barras de Independiente</h3>
+                        
+                            <!-- Categoría -->
+                            <!-- Usar strong en vez de b: strong ayuda a la accesibilidad y a posicionar en el buscador-->
+                            <strong>Deportes</strong>
+                    
+                            <!-- Contenido-->
+                             <!--Etiqueta p: párrafo, organiza el contenido en bloques legibles-->
+                            <p>Universidad de Chile continúa con acciones legales tras los ataques de hinchas de Independiente en Argentina. El club presentó una denuncia ante la Fiscalía de Buenos Aires y exige justicia mientras Conmebol analiza los hechos.</p>  
+                            <p>Por otro lado, se intensifica la planificación de la Supercopa 2025 entre Colo Colo y la U, pero el alcalde de Independencia rechaza que el partido se juegue en Santa Laura por falta de garantías de seguridad.</p>
+                        </article>
+                    </td>
+
+                    <!-- Contenido multimedia -->
+                    <td>
+                        <!-- Usar formato embed: permite incrustar un video en otra página sin mostrar la interfaz de YouTube y controlar su comportamiento y tamaño. -->
+                        <!-- Para convertir la URL de Youtube a embed: reemplazar watch?v= por embed y agregar / -->
+                        <iframe width="300" height="200"
+                            src="https://www.youtube.com/embed/8zg_Z_awgO4" 
+                            title="Violencia en Avellaneda: Hinchas de Universidad de Chile atacados por barras de Independiente" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td>
+                        <article>
+                            <!-- Título de la noticia-->
+                            <h3>Mario Marcel renunció al Ministerio de Hacienda</h3>
+                        
+                            <!-- Categoría -->
+                            <strong>Política</strong>
+                    
+                            <!-- Contenido-->
+                            <p> El ministro de Hacienda, Mario Marcel presentó esta mañana la renuncia al gobierno. Según información obtenida por CNN Chile, el hecho se debéría a problemas personales.</p>
+                        </article>
+                    </td>
+                    
+                    <!-- Contenido multimedia -->
+                    <td>
+                        <iframe width="300" height="150" 
+                            src="https://www.youtube.com/embed/PgwF1iCSjxs" 
+                            title="Mario Marcel renunció al Ministerio de Hacienda" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <article>
+                            <!-- Título de la noticia-->
+                            <h3>Lo que no te cuentan de invertir en criptomonedas</h3>
+                        
+                            <!-- Categoría -->
+                            <strong>Negocios</strong>
+                    
+                            <!-- Contenido-->
+                            <p>Lo que debes tener en cuenta antes de apostar por las criptomonedas: comprar criptomonedas parece estar de moda.</p> 
+                        </article>
+                    </td>
+                    
+                    <!-- Contenido multimedia -->
+                    <td>
+                        <audio controls>
+                            <source src="./assets/audio/criptomonedas.mp3" type="audio/mpeg">
+                            Tu navegador no soporta audio.
+                        </audio>
+                    </td>
+                </tr>
+        
+            </tbody>
+        </table>
+    </main>
+
+    <footer><!--Sección final: muestra datos de contacto, políticas de seguridad y derechos de autor.-->
+        <address><!--Etiqueta semántica para la dirección-->
+            O'Higgins 657, Concepción
+             <!--Enlace al n° de teléfono y correo electrónico a traves valores especiales de href-->
+             <!--Etiqueta a: permite crear enlaces, href define la URL de destino -->
+            <a href="tel:+56958437920">+56 9 5843 7920 </a>
+            <a href="mailto:burgosmarquezvania@gmail.com" target="_blank">burgosmarquezvania@gmail.com</a>
+        </address>
+        <p>El Faro | Portal de Noticias.<br>&copy; 2025 Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
