@@ -4,37 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Faro | Portal de Noticias</title>
+    <title>El Faro | Negocios</title>
 
     <link rel="icon" type="image/png" href="./assets/img/el-faro-logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS personalizado -->
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
 
-    <header>
+    <!-- Sección superior de avisos -->
+    <div class="bg-warning text-dark text-center py-2">
+        <strong>Aviso:</strong> Últimas noticias y actualizaciones en El Faro.
+    </div>
 
-        <img src="./assets/img/el-faro-logo-nom.png" alt="logo del portal de noticias El Faro" width="200" height="200" title="el-faro-logo">
-        <h1>El Faro</h1>
-        <h2>Portal de noticias</h2>
-        
-        <!-- Poner Nav dentro del Header ayuda a que la estructura sea semántica, clara para SEO y da mayor accesibilidad-->
-        <nav aria-label="Menú principal">
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./quienes-somos.html">Quiénes somos</a></li>
-                <li><a href="./deportes.html">Deportes</a></li>
-                <li><a href="./negocios.html">Negocios</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div class="banner-seccion">
-            <h2>Negocios</h2>
-            <img src="./assets/img/negocios.jpg" alt="negocios" width="748" height="419" title="negocios">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="./index.html">
+                <img src="./assets/img/el-faro-logo-nom.png" alt="El Faro" width="40" class="me-2">
+                <span class="fw-bold">El Faro</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./quienes-somos.html">Quiénes somos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./deportes.html">Deportes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./negocios.html">Negocios</a></li>
+                </ul>
+            </div>
         </div>
-        
+    </nav>
+
+    <!-- Banner de sección Negocios -->
+    <section class="banner-seccion my-4 position-relative text-center">
+        <img src="./assets/img/negocios.jpg" class="img-fluid rounded" alt="Negocios">
+        <h2 class="position-absolute top-50 start-50 translate-middle text-white fw-bold text-shadow">Negocios</h2>
+    </section>
+
+    <!-- Noticias de Negocios -->
+    <section class="container my-5">
         <table class="tabla_noticias">
             <thead>
                 <tr>
@@ -42,59 +57,34 @@
                     <th>Contenido multimedia</th>
                 </tr>
             </thead>
-     
             <tbody>
                 <tr>
                     <td>
-                        <!-- El atributo aria-label le da un nombre accesible al bloque para que el lector de pantalla lo anuncie.-->
-                        <article aria-label="Noticia de negocios sobre estudio de UC y Banco Falabella sobre nivel de educación financiera en Chile">
-                            <!-- Título de la noticia-->
+                        <article aria-label="Noticia de Negocios sobre estudio de UC y Banco Falabella sobre nivel de educación financiera en Chile">
                             <h3>“Es bajo y desigual”: Estudio UC y Banco Falabella da cuenta del nivel educación financiera en Chile.</h3>
-                        
-                            <!-- Categoría -->
-                            <!-- Usar strong en vez de b: strong ayuda a la accesibilidad y a posicionar en el buscador-->
                             <strong>Negocios</strong>
-                    
-                            <!-- Contenido-->
                             <p>El estudio “Radiografía a la Educación e Inclusión Financiera en Chile”, elaborado por el Centro de Políticas Públicas y Banco Falabella, reveló que el índice promedio de educación financiera en el país es bajo y desigual, alcanzando solo un 35,9% en una escala de 0 a 100.</p>
-                            <p>Realizado a partir de 1.502 encuestas a nivel nacional, el informe evidenció una brecha entre la autoevaluación y el desempeño real: mientras las personas se califican con un 3 en una escala de 0 a 5, el puntaje efectivo es de solo 1,6. Además, concluyó que los niveles de inclusión financiera están altamente determinados por el sexo, la edad y el nivel socioeconómico.</p> 
-                            <p>El índice de educación financiera promedio (en escala de 0 a 100) es bajo y desigual, alcanzando 35,9%. Solo el 20% de los encuestados demostró comprender el funcionamiento de las tasas de interés. Se evidenciaron brechas de género y nivel socioeconómico: 16 puntos entre hombres y mujeres, y 31 puntos entre NSE alto y bajo.</p>
-                            <p>La encuesta también evidenció que una mayor alfabetización financiera se asocia con mejores hábitos de administración del dinero. En el grupo con alta alfabetización, un 61% cumple con su presupuesto, frente al 26% en el grupo de baja alfabetización. Asimismo, el 63% ahorra voluntariamente en el primer grupo, versus el 35% en el segundo.</p>
-                            <p>Quienes poseen mayor alfabetización financiera acceden, en promedio, a 8,1 productos financieros, mientras que quienes tienen menor alfabetización utilizan 2,8 productos.</p>
-                            <p>El estudio se realizó entre el 4 y 12 de diciembre de 2024, con 1.502 entrevistas telefónicas a personas mayores de 18 años de distintas zonas del país. Tiene un nivel de confianza del 95% y un margen de error de ±2%.</p>
+                            <p>Realizado a partir de 1.502 encuestas a nivel nacional, el informe evidenció una brecha entre la autoevaluación y el desempeño real: mientras las personas se califican con un 3 en una escala de 0 a 5, el puntaje efectivo es de solo 1,6. Además, concluyó que los niveles de inclusión financiera están altamente determinados por el sexo, la edad y el nivel socioeconómico.</p>
                         </article>
                     </td>
-                    
-                    <!-- Contenido multimedia -->
                     <td>
-                        <!-- Usar formato embed: permite incrustar un video en otra página sin mostrar la interfaz de YouTube y controlar su comportamiento y tamaño. -->
-                        <!-- Para convertir la URL de Youtube a embed: reemplazar watch?v= por embed y agregar / -->
                         <iframe width="300" height="200" 
                             src="https://www.youtube.com/embed/T_SWrZtFpzI" 
-                            title="¡Lideresas y Banco Falabella por la Educación Financiera!" frameborder="0" 
+                            title="Educación Financiera en Chile" frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
                     </td>
                 </tr>
-        
+
                 <tr>
                     <td>
                         <article aria-label="Noticia de Negocios sobre criptomonedas">
-                            <!-- Título de la noticia-->
                             <h3>Lo que no te cuentan de invertir en criptomonedas.</h3>
-                        
-                            <!-- Categoría -->
                             <strong>Negocios</strong>
-                    
-                            <!-- Contenido-->
-                            <p>Lo que debes tener en cuenta antes de apostar por las criptomonedas: comprar criptomonedas parece estar de moda.</p> 
-                            <p>Antes de invertir en criptomonedas, debes investigar el activo, comprender que son inversiones de alto riesgo y volatilidad, y solo invertir el capital que estés dispuesto a perder. Es crucial usar plataformas seguras y confiables, crear un plan de inversión, y estar atento a posibles estafas que garantizan ganancias altas y rápidas.</p>
-                            <p>Las criptomonedas son activos volátiles, y su valor puede cambiar drásticamente en poco tiempo. Solo invierte dinero que no necesites a corto o largo plazo, ya que podrías perder parte o todo tu capital.</p>
+                            <p>Antes de invertir en criptomonedas, debes investigar el activo, comprender que son inversiones de alto riesgo y volatilidad, y solo invertir el capital que estés dispuesto a perder.</p>
                         </article>
                     </td>
-                    
-                    <!-- Contenido multimedia -->
                     <td>
                         <audio controls>
                             <source src="./assets/audio/criptomonedas.mp3" type="audio/mpeg">
@@ -102,24 +92,15 @@
                         </audio>
                     </td>
                 </tr>
-                
+
                 <tr>
                     <td>
                         <article aria-label="Noticia de Negocios sobre la venta de Puma">
-                            <!-- Título de la noticia-->
                             <h3>¿Puma en venta?: Familia dueña del 29% busca comprador ante derrumbe de la marca.</h3>
-                        
-                            <!-- Categoría -->
                             <strong>Negocios</strong>
-                    
-                            <!-- Contenido-->
-                            <p>La familia Pinault se ha puesto en contacto con posibles compradores de Puma después de que la marca deportiva alemana perdiera aproximadamente la mitad de su valor de mercado en el último año, según fuentes de Bloomberg.</p>
-                            <p>Se han puesto en contacto con posibles compradores, entre los que se encuentran Anta Sports Products Ltd. y Li Ning Co., para sondear su interés en comprar Puma, según las fuentes, que añaden que también han conversado con otras empresas de ropa deportiva en EE.UU., así como a fondos soberanos de Medio Oriente.</p>
-                            <p>Las acciones de Puma subieron hasta un 20% en la bolsa alemana tras la publicación de la noticia, la mayor alza desde octubre de 2001. La empresa tiene un valor de mercado de unos €3.200 millones (US$3.700 millones).</p>
+                            <p>La familia Pinault se ha puesto en contacto con posibles compradores de Puma después de que la marca deportiva alemana perdiera aproximadamente la mitad de su valor de mercado en el último año.</p>
                         </article>
                     </td>
-                    
-                    <!-- Contenido multimedia -->
                     <td>
                         <iframe width="300" height="200" 
                             src="https://www.youtube.com/embed/evfZyviC3Go" 
@@ -129,18 +110,32 @@
                         </iframe>
                     </td>
                 </tr>
-
             </tbody>
         </table>
-    </main>
+    </section>
 
-    <footer>
-        <address>
-            O'Higgins 657, Concepción
-            <a href="tel:+56958437920">+56 9 5843 7920 </a>
-            <a href="mailto:burgosmarquezvania@gmail.com" target="_blank">burgosmarquezvania@gmail.com</a>
-        </address>
-        <p>El Faro | Portal de Noticias.<br>&copy; 2025 Todos los derechos reservados.</p>
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h5>El Faro</h5>
+                    <p>Portal de noticias independiente. Síguenos para estar informado.</p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <h5>Contacto</h5>
+                    <p>O'Higgins 657, Concepción</p>
+                    <a href="tel:+56958437920" class="text-light d-block">+56 9 5843 7920</a>
+                    <a href="mailto:burgosmarquezvania@gmail.com" class="text-light d-block">burgosmarquezvania@gmail.com</a>
+                </div>
+            </div>
+            <div class="text-center pt-3 border-top">
+                <small>&copy; 2025 El Faro | Todos los derechos reservados.</small>
+            </div>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
