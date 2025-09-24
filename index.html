@@ -13,12 +13,12 @@
 </head>
 <body>
 
-  <!-- Agregar sección superior de avisos -->
+  <!-- Sección superior de avisos -->
   <div class="bg-warning text-dark text-center py-2">
     <strong>Aviso:</strong> Últimas noticias y actualizaciones en El Faro.
   </div>
 
-  <!-- Menú de navegación más moderna -->
+  <!-- Menú de navegación -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
@@ -32,14 +32,39 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="./index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="./quienes-somos.html">Quiénes somos</a></li>
-          <li class="nav-item"><a class="nav-link" href="./deportes.html">Deportes</a></li>
-          <li class="nav-item"><a class="nav-link" href="./negocios.html">Negocios</a></li>
+
+          <!-- Dropdown Deportes -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Deportes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./deportes.html">Todas</a></li>
+              <li><a class="dropdown-item" href="./futbol.html">Fútbol</a></li>
+              <li><a class="dropdown-item" href="./basquet.html">Básquetbol</a></li>
+              <li><a class="dropdown-item" href="./tenis.html">Tenis</a></li>
+            </ul>
+          </li>
+
+          <!-- Dropdown Negocios -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Negocios
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./negocios.html">Todas</a></li>
+              <li><a class="dropdown-item" href="./economia.html">Economía</a></li>
+              <li><a class="dropdown-item" href="./finanzas.html">Finanzas</a></li>
+              <li><a class="dropdown-item" href="./mercado.html">Mercado internacional</a></li>
+            </ul>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Agregar noticias destacadas -->
+  <!-- Noticias destacadas -->
   <section class="container my-5">
     <h2 class="mb-4">Noticias más recientes</h2>
     <div class="row">
@@ -55,12 +80,25 @@
         </div>
       </div>
 
-      <!-- Otros artículos pequeños -->
+      <!-- Otros artículos pequeños como cards -->
       <div class="col-lg-4">
-        <div class="list-group shadow-sm">
-          <a href="#" class="list-group-item list-group-item-action">Mario Marcel renunció al Ministerio de Hacienda</a>
-          <a href="#" class="list-group-item list-group-item-action">Lo que no te cuentan de invertir en criptomonedas</a>
-          <a href="#" class="list-group-item list-group-item-action">La Roja Sub-20 se prepara para el sudamericano</a>
+        <div class="card mb-3 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Mario Marcel renunció al Ministerio de Hacienda</h6>
+            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+          </div>
+        </div>
+        <div class="card mb-3 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">Lo que no te cuentan de invertir en criptomonedas</h6>
+            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+          </div>
+        </div>
+        <div class="card mb-3 shadow-sm">
+          <div class="card-body">
+            <h6 class="card-title">La Roja Sub-20 se prepara para el sudamericano</h6>
+            <a href="#" class="btn btn-sm btn-outline-primary">Leer más</a>
+          </div>
         </div>
       </div>
     </div>
@@ -100,16 +138,14 @@
     </div>
   </section>
 
-  <!-- Footer más grande y organizado -->
+  <!-- Footer -->
   <footer class="bg-dark text-light py-5 mt-5">
     <div class="container">
       <div class="row">
-        <!-- Info -->
         <div class="col-md-6 mb-3">
           <h5>El Faro</h5>
           <p>Portal de noticias independiente. Síguenos para estar informado.</p>
         </div>
-        <!-- Contacto -->
         <div class="col-md-6 mb-3">
           <h5>Contacto</h5>
           <p>O'Higgins 657, Concepción</p>

@@ -22,6 +22,7 @@
         <strong>Aviso:</strong> Últimas noticias y actualizaciones en El Faro.
     </div>
 
+    <!-- Navbar con submenús -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom shadow-sm">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="./index.html">
@@ -35,8 +36,32 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="./quienes-somos.html">Quiénes somos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./deportes.html">Deportes</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="./negocios.html">Negocios</a></li>
+
+                    <!-- Dropdown Deportes -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Deportes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./deportes.html">Todas</a></li>
+                            <li><a class="dropdown-item" href="./futbol.html">Fútbol</a></li>
+                            <li><a class="dropdown-item" href="./basquet.html">Básquetbol</a></li>
+                            <li><a class="dropdown-item" href="./tenis.html">Tenis</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown Negocios -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            Negocios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./negocios.html">Todas</a></li>
+                            <li><a class="dropdown-item" href="./economia.html">Economía</a></li>
+                            <li><a class="dropdown-item" href="./finanzas.html">Finanzas</a></li>
+                            <li><a class="dropdown-item" href="./mercado.html">Mercado internacional</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -50,70 +75,57 @@
 
     <!-- Noticias de Negocios -->
     <section class="container my-5">
-        <table class="tabla_noticias">
-            <thead>
-                <tr>
-                    <th>Noticia</th>
-                    <th>Contenido multimedia</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <article aria-label="Noticia de Negocios sobre estudio de UC y Banco Falabella sobre nivel de educación financiera en Chile">
-                            <h3>“Es bajo y desigual”: Estudio UC y Banco Falabella da cuenta del nivel educación financiera en Chile.</h3>
-                            <strong>Negocios</strong>
-                            <p>El estudio “Radiografía a la Educación e Inclusión Financiera en Chile”, elaborado por el Centro de Políticas Públicas y Banco Falabella, reveló que el índice promedio de educación financiera en el país es bajo y desigual, alcanzando solo un 35,9% en una escala de 0 a 100.</p>
-                            <p>Realizado a partir de 1.502 encuestas a nivel nacional, el informe evidenció una brecha entre la autoevaluación y el desempeño real: mientras las personas se califican con un 3 en una escala de 0 a 5, el puntaje efectivo es de solo 1,6. Además, concluyó que los niveles de inclusión financiera están altamente determinados por el sexo, la edad y el nivel socioeconómico.</p>
-                        </article>
-                    </td>
-                    <td>
-                        <iframe width="300" height="200" 
-                            src="https://www.youtube.com/embed/T_SWrZtFpzI" 
-                            title="Educación Financiera en Chile" frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </td>
-                </tr>
+        <div class="row g-4">
+            <!-- Artículo 1 -->
+            <div class="col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">“Es bajo y desigual”: Estudio UC y Banco Falabella</h5>
+                        <strong>Negocios</strong>
+                        <p class="card-text">El estudio “Radiografía a la Educación e Inclusión Financiera en Chile” revela que el índice promedio de educación financiera es bajo y desigual, alcanzando solo un 35,9%.</p>
+                    </div>
+                    <iframe class="card-img-bottom" width="100%" height="200" 
+                        src="https://www.youtube.com/embed/T_SWrZtFpzI" 
+                        title="Educación Financiera en Chile" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                </div>
+            </div>
 
-                <tr>
-                    <td>
-                        <article aria-label="Noticia de Negocios sobre criptomonedas">
-                            <h3>Lo que no te cuentan de invertir en criptomonedas.</h3>
-                            <strong>Negocios</strong>
-                            <p>Antes de invertir en criptomonedas, debes investigar el activo, comprender que son inversiones de alto riesgo y volatilidad, y solo invertir el capital que estés dispuesto a perder.</p>
-                        </article>
-                    </td>
-                    <td>
-                        <audio controls>
-                            <source src="./assets/audio/criptomonedas.mp3" type="audio/mpeg">
-                            Tu navegador no soporta audio.
-                        </audio>
-                    </td>
-                </tr>
+            <!-- Artículo 2 -->
+            <div class="col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Lo que no te cuentan de invertir en criptomonedas</h5>
+                        <strong>Negocios</strong>
+                        <p class="card-text">Antes de invertir en criptomonedas, debes investigar el activo, comprender que son inversiones de alto riesgo y volatilidad, y solo invertir el capital que estés dispuesto a perder.</p>
+                    </div>
+                    <audio class="w-100" controls>
+                        <source src="./assets/audio/criptomonedas.mp3" type="audio/mpeg">
+                        Tu navegador no soporta audio.
+                    </audio>
+                </div>
+            </div>
 
-                <tr>
-                    <td>
-                        <article aria-label="Noticia de Negocios sobre la venta de Puma">
-                            <h3>¿Puma en venta?: Familia dueña del 29% busca comprador ante derrumbe de la marca.</h3>
-                            <strong>Negocios</strong>
-                            <p>La familia Pinault se ha puesto en contacto con posibles compradores de Puma después de que la marca deportiva alemana perdiera aproximadamente la mitad de su valor de mercado en el último año.</p>
-                        </article>
-                    </td>
-                    <td>
-                        <iframe width="300" height="200" 
-                            src="https://www.youtube.com/embed/evfZyviC3Go" 
-                            title="Familia Pinault en búsqueda de compradores para Puma" frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+            <!-- Artículo 3 -->
+            <div class="col-lg-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">¿Puma en venta?: Familia dueña del 29% busca comprador</h5>
+                        <strong>Negocios</strong>
+                        <p class="card-text">La familia Pinault busca posibles compradores después de que la marca deportiva perdiera aproximadamente la mitad de su valor de mercado.</p>
+                    </div>
+                    <iframe class="card-img-bottom" width="100%" height="200" 
+                        src="https://www.youtube.com/embed/evfZyviC3Go" 
+                        title="Familia Pinault en búsqueda de compradores para Puma" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-dark text-light py-5 mt-5">
         <div class="container">
             <div class="row">
